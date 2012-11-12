@@ -1,0 +1,20 @@
+inherit gnome2
+
+NAME="libgxim"
+VERSION=0.3.3
+RELEASE=1
+CATEGORY="X11"
+SUMMARY="GObject X Input Method protocol library"
+DESCRIPTION="libgxim is a X Input Method (XIM) protocol library that is
+implemented by GObject. This library helps you to implement XIM server or
+client applications to communicate through XIM protocol without using Xlib API,
+particularly if your application uses GObject-based main loop."
+HOMEPAGE="http://code.google.com/p/libgxim/"
+SRC_URI="http://libgxim.googlecode.com/files/${NAME}-${VERSION}.tar.bz2"
+PATCH_URI="0.3.3-no-undefined.patch  0.3.3-vpath.patch"
+
+PKG_NAMES="libgxim2 libgxim-devel"
+libgxim2_CONTENTS="usr/bin/cyggxim-2.dll usr/share/doc/ usr/share/locale/"
+libgxim_devel_CONTENTS="usr/include/ usr/lib/ usr/share/gtk-doc/"
+
+KEEP_LA_FILES="none"
