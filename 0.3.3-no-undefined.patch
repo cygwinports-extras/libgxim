@@ -1,8 +1,0 @@
---- origsrc/libgxim-0.3.3/libgxim/Makefile.am	2008-10-16 03:15:07.000000000 -0500
-+++ src/libgxim-0.3.3/libgxim/Makefile.am	2012-11-11 22:38:26.767408400 -0600
-@@ -133,4 +133,5 @@ libgxim_la_CFLAGS =						\
- libgxim_la_LDFLAGS =						\
- 	$(LDFLAGS)						\
- 	-version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE)	\
-+	-no-undefined						\
- 	$(NULL)
