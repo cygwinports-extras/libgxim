@@ -12,10 +12,10 @@ particularly if your application uses GObject-based main loop."
 HOMEPAGE="http://tagoh.bitbucket.org/libgxim/"
 SRC_URI="https://bitbucket.org/tagoh/libgxim/downloads/libgxim-${VERSION}.tar.bz2"
 PATCH_URI="
+	0.5.0-aclocal.patch
+	0.5.0-gtk-doc.patch
 	0.5.0-no-undefined.patch
 "
-
-export ACLOCAL_PATH="m4macros"
 
 PKG_NAMES="libgxim4 libgxim-common libgxim-devel libgxim-doc"
 libgxim4_REQUIRES="libgxim-common"

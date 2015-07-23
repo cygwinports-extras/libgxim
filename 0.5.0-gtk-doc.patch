@@ -1,0 +1,41 @@
+--- origsrc/libgxim-0.5.0/docs/reference/Makefile.am	2013-01-18 02:01:54.000000000 -0600
++++ src/libgxim-0.5.0/docs/reference/Makefile.am	2015-07-22 20:09:51.345156300 -0500
+@@ -20,7 +20,7 @@ DOC_MAIN_SGML_FILE=$(DOC_MODULE)-docs.sg
+ # gtk-doc will search all .c & .h files beneath here for inline comments
+ # documenting the functions and macros.
+ # e.g. DOC_SOURCE_DIR=../../../gtk
+-DOC_SOURCE_DIR=../../libgxim
++DOC_SOURCE_DIR=$(top_srcdir)/libgxim
+ 
+ # Extra options to pass to gtkdoc-scangobj. Not normally needed.
+ SCANGOBJ_OPTIONS=
+--- origsrc/libgxim-0.5.0/libgxim/gximmessages.c	2013-01-17 23:55:07.000000000 -0600
++++ src/libgxim-0.5.0/libgxim/gximmessages.c	2015-07-22 20:11:41.074590200 -0500
+@@ -58,7 +58,7 @@
+  * <replaceable>SignalName</replaceable> will be replaced with following signal names. See manpage for
+  * <command>dbus-send</command> to learn usage for others.
+  *
+- * </para><variablelist>
++ * <variablelist>
+  * <varlistentry><term>Activate</term>
+  *  <listitem><para>
+  *   Sets the activity of the logging facility. a boolean value is required
+@@ -82,8 +82,7 @@
+  *   as a parameter. See g_xim_messages_enable_filter() for more details.
+  *  </para></listitem>
+  * </varlistentry>
+- * </variablelist>
+- * </refsect2><para>
++ * </variablelist></refsect2>
+  */
+ 
+ enum {
+--- origsrc/libgxim-0.5.0/libgxim.pc	2013-01-18 01:36:06.000000000 -0600
++++ src/libgxim-0.5.0/libgxim.pc	2015-07-22 20:08:24.142083000 -0500
+@@ -1,5 +1,5 @@
+ prefix=/usr
+-exec_prefix=${prefix}
++exec_prefix=/usr
+ libdir=${exec_prefix}/lib
+ includedir=${prefix}/include
+ 
